@@ -1,0 +1,42 @@
+body {
+  font-family: sans-serif;
+}
+table {
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+th,
+td {
+  border: 1px solid black;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  vertical-align: center;
+}
+.x {
+  color: rgb(124, 252, 0);
+  font-family: "Helvetica";
+  font-size: 30px;
+}
+.o {
+  color: rgb(250, 128, 114);
+  font-family: "Helvetica";
+  font-size: 30px;
+}
+
+#myBar {
+  width: 10%;
+  height: 30px;
+  background-color: #4caf50;
+  // text-align: center;
+  line-height: 30px;
+  color: white;
+}
+.col {
+  border: 1px solid black;
+  margin: 7px 0;
+  text-align: center;
+  line-height: 60px;
+
+  padding: 0;
+}
