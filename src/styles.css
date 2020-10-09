@@ -14,12 +14,12 @@ td {
   vertical-align: center;
 }
 .x {
-  color: rgb(124, 252, 0);
+  background-color: rgb(124, 252, 0);
   font-family: "Helvetica";
   font-size: 30px;
 }
 .o {
-  color: rgb(250, 128, 114);
+  background-color: rgb(250, 128, 114);
   font-family: "Helvetica";
   font-size: 30px;
 }
