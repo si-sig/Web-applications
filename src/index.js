@@ -1,5 +1,5 @@
 import "./styles.css";
-let turn = "X";
+let turn = "x";
 if (document.readyState !== "loading") {
   // Document ready, executing
   console.log("Document ready, executing");
@@ -43,11 +43,11 @@ function initializeCode() {
       cell.addEventListener("click", function () {
         changePlayer();
 
-        if (cell.innerHTML !== "X" && cell.innerHTML !== "O") {
-          if (turn === "X") {
+        if (cell.innerHTML !== "x" && cell.innerHTML !== "o") {
+          if (turn === "x") {
             cell.className = "x";
             cell.innerHTML = turn;
-            turn = "O";
+            turn = "o";
 
             x = cell.parentNode.rowIndex;
             y = cell.cellIndex;
@@ -83,7 +83,7 @@ function initializeCode() {
           } else {
             cell.className = "o";
             cell.innerHTML = turn;
-            turn = "X";
+            turn = "x";
 
             x = cell.parentNode.rowIndex;
             y = cell.cellIndex;
@@ -134,10 +134,10 @@ function initializeCode() {
     var width = 0;
     intervalHandler = setInterval(frame, playerTurnTime / 10);
     timeoutHandler = window.setTimeout(function () {
-      if (turn === "X") {
-        turn = "O";
+      if (turn === "x") {
+        turn = "o";
       } else {
-        turn = "X";
+        turn = "x";
       }
       changePlayer();
     }, playerTurnTime);
