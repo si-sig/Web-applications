@@ -1,4 +1,4 @@
-var Post = require("../models/post");
+var Post = require("../models/TableStatus");
 
 // Good validation documentation available at https://express-validator.github.io/docs/
 const { body, validationResult } = require("express-validator/check");
@@ -21,13 +21,18 @@ exports.create = function (req, res, next) {
 
   // Create a post object
   // Improve: Use promises with .then()
-  var post = new Post({ content: req.body.content, author: req.body.author });
+  /*var post = new Post({
+    player_turn: req.body.player_turn,
+    table_status: req.body.table_status
+  });*/
 
-  post.save(function (err) {
-    if (err) {
-      return next(err);
+  Post.findOneAndUpdate(
+    { id: 1 },
+    { player_turn: req.body.player_turn, table_status: req.body.table_status },
+    { upsert: true },
+    (err, doc) => {
+      if (err) next(err);
+      res.redirect("/");
     }
-    // Successful - redirect to new book record.
-    res.redirect("/posts");
-  });
+  );
 };

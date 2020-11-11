@@ -5,6 +5,10 @@
 }*/
 
 let turn = "x";
+let game_status = {
+  player_turn: turn,
+  table_status: []
+};
 if (document.readyState !== "loading") {
   // Document ready, executing
   console.log("Document ready, executing");
@@ -118,6 +122,23 @@ function initializeCode() {
           }
         } else {
           alert("Outch");
+        }
+        let game_status = {
+          player_turn: turn,
+          table_status: grid
+        };
+      });
+
+      fetch("/posts/create", {
+        method: "POST",
+        redirect: "follow",
+        headers: {
+          "Content-type": "application/json"
+        },
+        body: JSON.stringify(game_status)
+      }).then((response) => {
+        if (response.redirected) {
+          window.location.href = response.url;
         }
       });
     }
