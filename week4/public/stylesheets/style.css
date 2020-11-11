@@ -1,0 +1,25 @@
+body {
+  font-family: sans-serif;
+}
+table {
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+th,
+td {
+  border: 1px solid black;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  vertical-align: center;
+}
+.x {
+  background-color: rgb(124, 252, 0);
+  font-family: "Helvetica";
+  font-size: 30px;
+}
+.o {
+  background-color: rgb(250, 128, 114);
+  font-family: "Helvetica";
+  font-size: 30px;
+}
